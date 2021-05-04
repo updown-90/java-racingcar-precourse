@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 public class RacingHistoryPerCars {
 
@@ -25,10 +24,5 @@ public class RacingHistoryPerCars {
 		}
 
 		return Collections.max(positionList);
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(racingHistoryPerCars);
 	}
 }
