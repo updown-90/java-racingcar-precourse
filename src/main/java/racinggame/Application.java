@@ -1,7 +1,18 @@
 package racinggame;
 
+import controller.Racing;
+import model.RacingResult;
+import view.InputView;
+import view.ResultView;
+
+import java.util.List;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO 자동차 경주 게임 구현
+        List<String> carNames = InputView.scannerUserInputCarsNames();
+        RacingResult racingResult = Racing.racing(carNames, InputView.scannerUserInputRacingCount());
+
+        ResultView.printRacingHistory(racingResult);
+        ResultView.printWinnerNames(racingResult);
     }
 }
