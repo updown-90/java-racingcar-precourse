@@ -27,7 +27,7 @@ public class ApplicationTest extends NSTest {
     @Test
     void 이름에_대한_예외_처리() {
         assertSimpleTest(() -> {
-            runNoLineFound("pobi,javaji");
+            runNoLineFound("pobi,javaji", "1");
             verify(ERROR_MESSAGE);
         });
     }

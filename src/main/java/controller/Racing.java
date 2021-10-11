@@ -27,13 +27,13 @@ public class Racing {
 
 	private static void validateCarNames(List<String> carNames) {
 		if (carNames == null || carNames.isEmpty()) {
-			throw new IllegalArgumentException("자동차 이름이 입력되지 않았습니다");
+			throw new IllegalArgumentException("[ERROR] 자동차 이름이 입력되지 않았습니다");
 		}
 	}
 
 	private static void validateMoveCount(int moveCount) {
 		if (moveCount <= MIN_MOVE_COUNT) {
-			throw new IllegalArgumentException("시도할 횟수를 1이상으로 입력해주세요");
+			throw new IllegalArgumentException("[ERROR] 시도할 횟수를 1이상으로 입력해주세요");
 		}
 	}
 }

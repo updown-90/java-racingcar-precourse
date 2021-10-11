@@ -21,13 +21,13 @@ public class Car {
 
 	private void validateNull(String carName) {
 		if (carName == null || carName.isEmpty()) {
-			throw new IllegalArgumentException("자동차 이름을 입력해주세요.");
+			throw new IllegalArgumentException("[ERROR] 자동차 이름을 입력해주세요.");
 		}
 	}
 
 	private void validateLength(String carName) {
 		if (carName.length() > CAR_NAME_MAX_LENGTH) {
-			throw new IllegalArgumentException("자동차 이름이 5자를 초과하였습니다.");
+			throw new IllegalArgumentException("[ERROR] 자동차 이름이 5자를 초과하였습니다.");
 		}
 	}
 

@@ -11,8 +11,8 @@ public class ResultView {
 	public static final String CAR_POSITION_SYMBOL = "-";
 
 	public static void printWinnerNames(RacingResult racingResult) {
-		System.out.print(String.join(WINNER_CAR_NAMES_DELIMITER, racingResult.getWinnerNames()));
-		System.out.println(" 이(가) 최종 우승했습니다.");
+		System.out.print("최종 우승자는 ");
+		System.out.print(String.join(WINNER_CAR_NAMES_DELIMITER, racingResult.getWinnerNames()) + " 입니다.");
 	}
 
 	public static void printRacingHistory(RacingResult racingResult) {
