@@ -1,11 +1,13 @@
 package model;
 
+import nextstep.utils.Randoms;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import util.RandomNumberCreator;
-
 public class Cars {
+	public static final int RANDOM_MIN_NUMBER = 0;
+	public static final int RANDOM_MAX_NUMBER = 9;
 
 	private final List<Car> cars;
 
@@ -27,7 +29,7 @@ public class Cars {
 		List<RacingHistoryPerCar> racingHistoryPerTurn = new ArrayList<>();
 
 		for (Car car : cars) {
-			car.move(RandomNumberCreator.from0To9RandomNumber());
+			car.move(Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER));
 			racingHistoryPerTurn.add(new RacingHistoryPerCar(car.getCarName(), car.getPosition()));
 		}
 
